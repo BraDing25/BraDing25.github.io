@@ -1,0 +1,439 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #223661;
+    margin: 0;
+}
+h1{
+    color: #ffffff;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 2.5em;
+    margin: 15px 30px 15px 30px;
+}
+h2{
+    color: #ffffff;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight: 550;
+    font-size: 1.5em;
+    margin: 0px 30px;
+}
+h3{
+    color: #ffffff;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight: 500;
+    margin: 0px 30px;
+}
+p{
+    color: #ffffff;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight: 400;
+    margin: 0px 30px;
+    font-size: 1.6em;
+}
+
+li{
+    color: #000000;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 1.6em;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+}
+
+#bar{
+    background-color: #ffffff;
+    position: fixed;
+    top: -60px;
+    transition: top 0.3s;
+    z-index: 1000;
+    box-shadow: #000000 0px 0px 8px;
+    margin: 0;
+    width: 100%;
+}
+
+#navList{
+    align-content: center;
+    list-style: none;
+    margin: 0;
+}
+
+.navLink{
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 0.7em;
+    margin: 15px 10px;
+    float: right;
+    display:block;
+    position: relative;
+}
+
+.navLink:link, .navLink:visited {
+    color: #000000;
+}
+
+.navLink:hover{
+    color: #303030;
+}
+
+.navLink:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1.5px;
+  left: 50%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navLink:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
+
+.navLink:active {
+    color: #363636;
+}
+
+@keyframes fadeIn {
+    0% {
+        margin-top: 100px;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.animate.in-view {
+    animation: fadeIn 1s ease 0s normal forwards;
+}
+
+#nameTitle{
+    font-size: 7em;
+    margin: 0px 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease 0s normal forwards;
+}
+
+#nameSub{
+    animation: fadeIn 1s ease 0.3s normal forwards;
+    opacity: 0;
+}
+
+#nameSocial{
+    margin: 0px 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s normal forwards;
+}
+
+@keyframes box{
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    20% {
+        height: 50px;
+        width: 0px;
+    }
+    100% {
+        width: 500px;
+        height: 50px;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#skills{
+    background-color: #eaecff; 
+    border-radius: 8px; 
+    padding: 3px; 
+    display: inline-flex;
+    margin:0px 30px;
+    width: 500px;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#skills.in-view{
+    animation: box 3s ease 0s normal forwards;
+}
+
+#pycont, #htmlcont, #csscont, #ccont, #jscont{
+    opacity: 0;
+}
+
+#pycont.in-view, #htmlcont.in-view, #csscont.in-view, #ccont.in-view, #jscont.in-view{
+    animation: fade 1s ease 1.5s normal forwards;
+}
+
+#jscont{
+    position: relative;
+    width: 48px;
+}
+
+#jspos{
+    position: absolute;
+    transform: translateY(10%);
+}
+
+#photoBlock{
+    position: relative;
+    transform: translate(170%, -63%);
+    border: 25px solid #eaecff;
+    border-radius: 70px;
+    height: 500px;
+    width: 450px;
+    overflow: hidden;
+}
+
+.photo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#brady {
+    object-position: 0 0;
+}
+
+.sectionWhite{
+    background-color: white;
+}
+
+.sectionWhite h1, .sectionWhite h2, .sectionWhite h3, .sectionWhite p{
+    color: black;
+}
+
+.social svg{
+    fill:white;
+}
+
+.social svg:hover{
+    fill: #d3d6f3;
+}
+
+#projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project{
+    width: 500px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: #15284e 5px 5px 10px 10px;
+    position: relative !important;
+}
+
+.project h2{
+    color: black;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0px 30px;
+}
+
+.project p{
+    color: black;
+}
+
+.readMore{
+    position: absolute !important;
+    bottom: 20px !important;
+    margin: 0px 30px 0px 30px  !important;  
+    border: 2px solid #eaecff !important;
+    border-radius: 5px !important;
+    padding: 0px 2px !important;
+    background-color:#eaecff !important;
+}
+
+.project a:link, .project a:visited, .project a:hover, .project a:active {
+    font-size: 1em !important;
+    font-weight: 600 !important;
+    font-family: "Outfit", Verdana, sans-serif !important;
+}
+
+.project a:link, .project a:visited{
+    color: black;
+}
+
+.project a:hover{
+    color: #353535;
+}
+
+.project a:active{
+    color: #1d1d1d;
+}
+
+.projectPhoto{
+    position: relative;
+    transform: translate(5%, 5%);
+    border-radius: 20px;
+    height: 300px;
+    width: 450px;
+    overflow: hidden;
+}
+
+.tag{
+    color: #ffffff;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight:450;
+    border-radius: 8px;
+    border: 3px solid;
+    margin: 0px 30px;
+    padding: 1px 4px;
+}
+
+#python{
+    background-color: #FFC107;
+    border:#FFC107;
+}
+
+@keyframes club{
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    20% {
+        height: 370px;
+        width: 0px;
+    }
+    100% {
+        width: 800px;
+        height: 370px;
+    }
+}
+
+#club{
+    background-color: #eaecff;
+    border: 5px solid #eaecff;
+    border-radius: 14px;
+    height: 370px;
+    width: 800px;
+    margin: 0px 30px;
+}
+
+#club.in-view{
+    animation: club 3s ease 0s normal forwards;
+}
+
+#clubPhoto{
+    position: absolute;
+    transform: translate(190%, -10%);
+    border: 10px solid #ffffff;
+    border-radius: 20px;
+    height: 320px;
+    width: 250px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#clubPhoto.in-view{
+    animation: fade 1s ease 2.5s normal forwards;
+}
+
+.clubcont{
+    opacity: 0;
+}
+
+.clubcont.in-view{
+    animation: fade 1s ease 1.5s normal forwards;
+}
+
+#club h2, #edu h2{
+    font-size: 2.5em;
+}
+
+#edu h3{
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+#edu p{
+    font-size: 1.4em;
+}
+
+#connect{
+    display: inline-grid;
+    margin: 15px 35%;
+}
+
+#form{
+    display: table;
+}
+
+.input{
+    height: 2em;
+}
+
+#message{
+    resize: vertical;
+}
+
+input, #message{
+    color: #000000;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 1.0em;
+    margin: 5px 0;
+    border-radius: 8px;
+    width: 200%;
+    height: 100%;
+    border: 2px solid #ffffff;
+    outline: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus, #message:focus{
+    box-shadow: 0 0 0 3px #112042;
+    background-color: #c5c5c5;
+    border-color: #c5c5c5;
+}
+
+input:focus::placeholder, #message:focus::placeholder{
+    color: #303030;
+}
+
+button{
+    color: #000000;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 1.0em;
+    margin: 5px 0;
+    border-radius: 8px;
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+    background-color: #eaecff;
+}
+
+button:hover{
+    background-color: #dbdffa;
+}
+
+button:active{
+    background-color: #c7c9fc;
+}
