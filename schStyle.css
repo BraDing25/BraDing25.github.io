@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(245, 241, 220);
+    margin: 0px;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0px;
+    padding: 15px;
+    color: #ffc907;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: 550;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+form label {
+    color: black;
+}
+
+#info {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#info svg:hover {
+    fill: #c59a00;
+    cursor: pointer;
+}
+
+#classlist {
+    margin: auto;
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+.check {
+    accent-color: #ffc907;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white
+}
+
+.row {
+    display: flex;
+    flex: 1 1 100%; /* Makes each row take up full width before wrapping */
+    gap: 0px;
+}
+
+.item {
+    width: 33.33%; /* Each item takes up one-third of the row */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 30px;
+}
+
+tr, th, td {
+    border: 1px solid #8d8d8d;
+}
+
+td {
+    font-size: 0.9em;
+    height: 10px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#print {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+    float: left;
+    margin-right: 50px;
+}
+
+li::marker {
+    color: #ffc907;
+    font-size: 1.2em;
+}
