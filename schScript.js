@@ -22,8 +22,8 @@ window.onload = function run() {
     let classCount = 0; // count only in-person courses
 
     for (let i = 0; i < items.length; i++) {
-        if (isNumber(items[i].section)) {
-            if (classCount % 3 === 0) {
+        if (isNumber(items[i].section)) { // Check if section is a number (in-person course)
+            if (classCount % 3 === 0) { // Create a new row for every 3 items
                 classRow = document.createElement('div');
                 classRow.classList.add('row');
                 clist.appendChild(classRow);
