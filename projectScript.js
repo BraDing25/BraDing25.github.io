@@ -8,6 +8,6 @@ function scrollFunction() {
   } else {
     document.getElementById("header").style.height = "110vh";
     document.getElementById("titleSection").style.top = "25%";
-    document.getElementById("title").style.fontSize = "13em";
+    document.getElementById("title").style.fontSize = "10em";
   }
 }
