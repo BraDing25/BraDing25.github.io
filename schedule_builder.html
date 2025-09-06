@@ -86,7 +86,7 @@
             </div>
             <div>
                 <h2>How It Works</h2>
-                <div class="parBlock">
+                <div>
                     <p><b>***Please note that this is simply a proof of concept site to showcase a new schedule building idea. Many aspects does not work properly or at all such as the login screen.***</b></p>
                 </div>
                 <br>
@@ -95,10 +95,68 @@
                     in the top bar if they are in person, and the bottom bar if they are online. The user can select which classes they want
                     in the schedule, and the program will automatically build a schedule based on the selected classes.
                 </p>
-                <p>This program is good for debating which of the same class but different section should be chosen based on other classes</p>
+                <p>This program is good for debating which of the same class but different section should be chosen based on other classes.</p>
                 <br>
+                <div style="height: 600px;">
+                    <span><p class="desc">Class sorting method</p></span>
+                    <pre style="float: left;"><code>    let classRow;
+    let classCount = 0; // count only in-person courses
+
+    for (let i = 0; i < items.length; i++) {
+        if (isNumber(items[i].section)) { // Check if section is a number (in-person course)
+            if (classCount % 3 === 0) { // Create a new row for every 3 items
+                classRow = document.createElement('div');
+                classRow.classList.add('row');
+                clist.appendChild(classRow);
+            }
+
+            const itemElement = document.createElement('div');
+            itemElement.classList.add('item');
+            const inputElement = document.createElement('input');
+            inputElement.type = 'checkbox';
+            inputElement.id = `check${i}`;
+            inputElement.classList.add('check')
+            inputElement.checked = true;
+            const labelElement = document.createElement('label');
+            labelElement.htmlFor = `check${i}`;
+            labelElement.textContent = `${items[i].code} - ${items[i].name} (${items[i].days} ${items[i].time}) Sec: ${items[i].section}`;
+            itemElement.appendChild(inputElement);
+            itemElement.appendChild(labelElement);
+            classRow.appendChild(itemElement);
+
+            classCount++; // increment only for in-person courses
+        }
+    }</code></pre>
+                </div>
+                <div style="height: 530px;">
+                    <span><p class="desc">Schedule Building</p></span>
+                    <pre style="float: left;"><code>function buildTable() {
+    const days = ["M", "T", "W", "R", "F"];
+    const startHour = 8;
+    const endHour = 20;
+    const tableBody = [];
+
+    for (let h = startHour; h < endHour; h++) {
+        for (let m = 0; m < 60; m += 10) {
+            let hh = String(h).padStart(2, "0");
+            let mm = String(m).padStart(2, "0");
+            let timeLabel = `${hh}:${mm}`;
+            let readLabel = `${(h > 12 ? h - 12 : h)}:${mm} ${h >= 12 ? "PM" : "AM"}`;
+
+            tableBody.push(`<tr>`);
+            tableBody.push(`<td>${readLabel}</td>`);
+
+            for (let d = 0; d < days.length; d++) {
+                tableBody.push(`<td id="${days[d]}-${timeLabel}"></td>`);
+            }
+            tableBody.push(`</tr>`);
+        }
+    }
+    document.getElementById("schedule-body").innerHTML = tableBody.join("");
+}</code></pre>
+                </div>
                 <p><i>Example Schedule</i></p>
-                <img src="./Images/schedule.jpeg" alt="Example Schedule">
+                <img src="./Images/schedule.png" alt="Example Schedule" id="imgSch">
             </div>
         </section>
     </body>
