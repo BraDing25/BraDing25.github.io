@@ -108,14 +108,12 @@ a:link, a:visited, a:hover, a:active {
 
 @keyframes fadeIn {
     0% {
-        margin-top: 100px;
     }
     50% {
         opacity: 0;
     }
     100% {
         opacity: 1;
-        margin-top: 0px;
     }
 }
 
@@ -200,7 +198,6 @@ a:link, a:visited, a:hover, a:active {
 
 #photoBlock{
     position: relative;
-    transform: translate(170%, -63%);
     border: 25px solid #eaecff;
     border-radius: 70px;
     height: 500px;
@@ -247,6 +244,7 @@ a:link, a:visited, a:hover, a:active {
     border-radius: 14px;
     box-shadow: #15284e 5px 5px 10px 10px;
     position: relative !important;
+    margin: 0px 0px 30px 0px !important;
 }
 
 .project h2{
@@ -299,11 +297,12 @@ a:link, a:visited, a:hover, a:active {
 
 .tag{
     color: #ffffff;
+    fill: #ffffff;
     font-family: "Outfit", Verdana, sans-serif;
     font-weight:450;
     border-radius: 8px;
     border: 3px solid;
-    margin: 0px 30px;
+    margin: 0px 5px;
     padding: 1px 4px;
 }
 
@@ -312,18 +311,33 @@ a:link, a:visited, a:hover, a:active {
     border:#FFC107;
 }
 
+#html{
+    background-color: #E34F26;
+    border:#E34F26;
+}
+
+#css{
+    background-color: #1572B6;
+    border:#1572B6;
+}
+
+#javascript{
+    background-color: #F7DF1E;
+    border:#F7DF1E;
+}
+
 @keyframes club{
     0% {
         width: 0px;
         height: 0px;
     }
     20% {
-        height: 370px;
         width: 0px;
+        height: 360px;
     }
     100% {
-        width: 800px;
-        height: 370px;
+        width: 1000px;
+        height: 360px;
     }
 }
 
@@ -331,9 +345,10 @@ a:link, a:visited, a:hover, a:active {
     background-color: #eaecff;
     border: 5px solid #eaecff;
     border-radius: 14px;
-    height: 370px;
-    width: 800px;
+    width: 1000px;
+    height: 360px;
     margin: 0px 30px;
+    display: flex;
 }
 
 #club.in-view{
@@ -341,14 +356,13 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #clubPhoto{
-    position: absolute;
-    transform: translate(190%, -10%);
     border: 10px solid #ffffff;
     border-radius: 20px;
     height: 320px;
     width: 250px;
     overflow: hidden;
     opacity: 0;
+    margin: 10px;
 }
 
 #clubPhoto.in-view{
