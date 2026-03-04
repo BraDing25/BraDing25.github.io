@@ -163,7 +163,7 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
-#skills{
+#skills1, #skills2{
     background-color: #eaecff; 
     border-radius: 8px; 
     padding: 3px; 
@@ -174,15 +174,20 @@ a:link, a:visited, a:hover, a:active {
     justify-content: space-evenly;
 }
 
-#skills.in-view{
+#skills1.in-view, #skills2.in-view{
     animation: box 3s ease 0s normal forwards;
 }
 
-#pycont, #htmlcont, #csscont, #ccont, #jscont{
+#pycont, #htmlcont, #csscont, #ccont, #jscont, #matlab, #nx, #ansys, #openrocket, #jmars{
     opacity: 0;
 }
 
-#pycont.in-view, #htmlcont.in-view, #csscont.in-view, #ccont.in-view, #jscont.in-view{
+#nx, #openrocket, #jmars{
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#pycont.in-view, #htmlcont.in-view, #csscont.in-view, #ccont.in-view, #jscont.in-view, #matlab.in-view, #nx.in-view, #ansys.in-view, #openrocket.in-view, #jmars.in-view{
     animation: fade 1s ease 1.5s normal forwards;
 }
 
@@ -212,7 +217,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #brady {
-    object-position: 0 0;
+    object-position: 0 50;
 }
 
 .sectionWhite{
@@ -235,6 +240,12 @@ a:link, a:visited, a:hover, a:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    row-gap: 50px;
+}
+
+.pproj{
+    font-size: 18px;
+    color: #f8c407;
 }
 
 .project{
