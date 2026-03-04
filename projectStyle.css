@@ -77,17 +77,6 @@ pre{
     float: right;
 }
 
-#dot {
-  height: 30px;
-  width: 30px;
-  background-color: #223661;
-  border-radius: 50%;
-  display: block;
-  position:absolute;
-  z-index: 1;
-  transform: translate(-10%, -5%);
-}
-
 #titleSection{
     position: relative;
     padding: 0px 60px;
@@ -100,8 +89,13 @@ pre{
 }
 
 .icon {
-    position: relative;
-    z-index: 2;
+    background-color: #223661;
+    border-radius: 50%;
+    height: 33px;
+    width: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon svg:hover{
@@ -145,6 +139,11 @@ pre{
 #javascript{
     background-color: #F7DF1E;
     border:#F7DF1E;
+}
+
+#python{
+    background-color: #FFC107;
+    border:#FFC107;
 }
 
 #imgSch {
